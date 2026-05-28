@@ -1,24 +1,37 @@
-# Three-Body-Problem
-Numerical analysis of chaos and stability in the gravitational Three-Body Problem. Implementation of 8th-order Runge-Kutta method and Lyapunov exponents for Solar System, Figure-8, and Burrau's scenarios. 
+# Three-Body Problem Simulation & Chaos Analysis
+
+## Overview
+This repository presents a numerical analysis of chaos and stability within the gravitational Three-Body Problem. The project implements an 8th-order Runge-Kutta (RK8) method and utilizes Lyapunov exponents to quantify chaotic behavior across various configurations, including the Solar System, Figure-8, and Burrau's scenarios.
 
 ![Figure-8 Simulation](gifs/figure8_drift.gif)
 
-## 🌌 Project Overview
-This project investigates the complex dynamics of the Three-Body Problem, a classic challenge in celestial mechanics where three bodies interact through Newtonian gravity. The study focuses on identifying deterministic chaos and assessing stability across different initial configurations.
+## Highlights
+* **Numerical Integration:** Modeling of three-body gravitational dynamics using an 8th-order Runge-Kutta method (DOP853).
+* **Chaos Analysis:** Implementation of Lyapunov exponent calculations to measure the system's sensitivity to initial conditions.
+* **3D Visualization:** Generation of 3D orbital trajectories utilizing Matplotlib.
 
-## 🚀 Key Features
-* **High-Order Numerical Integration:** Implementation of the **8th-order Runge-Kutta method** to solve a system of 18 first-order differential equations.
-* **Chaos Quantification:** Calculation of **Lyapunov exponents** ($\lambda$) to measure the sensitivity to initial conditions.
-* **Unit Normalization:** Use of canonical units (Solar mass, AU) to minimize numerical errors.
+## Technologies Used
+* **Language:** Python 3.13+
+* **Numerical Modeling:** NumPy, SciPy
+* **Visualization:** Matplotlib
 
-## 🧪 Analyzed Scenarios
-The simulator evaluates three distinct gravitational setups:
-1. **Sun-Earth-Mars:** A simplified planetary model demonstrating regular, periodic orbits with high stability.
-2. **Figure-8 Orbit:** A unique periodic solution where three equal masses follow a single figure-eight track.
-3. **Pythagoras (Burrau's Problem):** A highly chaotic scenario starting with three bodies at the vertices of a 3-4-5 triangle, leading to extreme sensitivity and the eventual ejection of one body.
+## Getting Started
 
-## 📊 Methodology & Findings
-* **Stability Analysis:** Tested system sensitivity by introducing minor perturbations ($\epsilon = 10^{-12}$ AU).
-* **Dimensional Resilience:** Observed that while X/Y perturbations in planar systems often lead to chaos, Z-axis perturbations (inclination changes) maintain geometric stability.
-* **Maximum Chaos:** Burrau's Problem exhibited the highest Lyapunov exponents, confirming it as the most chaotic scenario tested.
+This project uses `uv` for Python environment management. 
 
+### Installation & Usage
+
+1. **Clone the repository:**
+   `git clone https://github.com/m-kuchta/three-body-simulation.git`
+   `cd three-body-problem`
+
+2. **Sync the environment (this automatically creates a .venv and installs dependencies):**
+   `uv sync`
+
+3. **Activate the virtual environment:**
+   * Linux/macOS: `source .venv/bin/activate`
+   * Windows: `.venv\Scripts\activate`
+
+4. **Run the simulation:**
+   Launch Jupyter and open the simulation notebook:
+   `jupyter notebook three_body_problem.ipynb`
